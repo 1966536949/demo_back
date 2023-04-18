@@ -1,16 +1,11 @@
 package com.controller;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.UUID;
-
+import com.annotation.IgnoreAuth;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.entity.ConfigEntity;
+import com.entity.EIException;
+import com.service.ConfigService;
+import com.utils.R;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,15 +14,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ResourceUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.annotation.IgnoreAuth;
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.entity.ConfigEntity;
-import com.entity.EIException;
-import com.service.ConfigService;
-import com.utils.R;
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 
 /**
  * 上传文件映射表

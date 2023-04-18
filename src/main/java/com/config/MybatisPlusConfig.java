@@ -1,11 +1,8 @@
-
 package com.config;
 
+import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.baomidou.mybatisplus.mapper.MetaObjectHandler;
-import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 
 /**
  * mybatis-plus配置
@@ -20,5 +17,5 @@ public class MybatisPlusConfig {
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();
     }
-    
+
 }

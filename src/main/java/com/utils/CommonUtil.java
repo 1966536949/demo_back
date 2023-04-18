@@ -1,15 +1,16 @@
 package com.utils;
 
-import java.util.Random;
-import org.springframework.stereotype.Component;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
+import org.springframework.stereotype.Component;
+
 import java.text.DecimalFormat;
 import java.util.Objects;
+import java.util.Random;
 
 @Component
 public class CommonUtil {
-	/**
+    /**
      * 获取随机字符串
      *
      * @param num
@@ -26,22 +27,22 @@ public class CommonUtil {
         return sb.toString();
     }
 
-	/**
-	 * 获取随机验证码
-	 *
-	 * @param num
-	 * @return
-	 */
-	public static String getRandomNumber(Integer num) {
-	    String base = "0123456789";
-	    Random random = new Random();
-	    StringBuffer sb = new StringBuffer();
-	    for (int i = 0; i < num; i++) {
-	        int number = random.nextInt(base.length());
-	        sb.append(base.charAt(number));
-	    }
-	    return sb.toString();
-	}
+    /**
+     * 获取随机验证码
+     *
+     * @param num
+     * @return
+     */
+    public static String getRandomNumber(Integer num) {
+        String base = "0123456789";
+        Random random = new Random();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < num; i++) {
+            int number = random.nextInt(base.length());
+            sb.append(base.charAt(number));
+        }
+        return sb.toString();
+    }
 
     public static String getCellValue(Cell cell) {
         String resultValue = "";

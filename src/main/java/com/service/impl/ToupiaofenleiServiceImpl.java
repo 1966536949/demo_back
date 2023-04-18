@@ -1,23 +1,20 @@
 package com.service.impl;
 
-import org.springframework.stereotype.Service;
-
-import java.util.Map;
-import java.util.List;
-
-import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.utils.PageUtils;
-import com.utils.Query;
-
-
 import com.dao.ToupiaofenleiDao;
 import com.entity.ToupiaofenleiEntity;
-import com.service.ToupiaofenleiService;
-import com.entity.vo.ToupiaofenleiVO;
 import com.entity.view.ToupiaofenleiView;
+import com.entity.vo.ToupiaofenleiVO;
+import com.service.ToupiaofenleiService;
+import com.utils.PageUtils;
+import com.utils.Query;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
 
 @Service("toupiaofenleiService")
 public class ToupiaofenleiServiceImpl extends ServiceImpl<ToupiaofenleiDao, ToupiaofenleiEntity> implements ToupiaofenleiService {
